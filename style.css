@@ -5,8 +5,8 @@
 }
 
 :root {
-    --primary-color: #2B452E;
-    --secondary-color: #3D7844;
+    --primary-color: #1e1e2f;
+    --secondary-color: rgb(35, 40, 80);
     --accent-color: #e74c3c;
     --text-color: #333;
     --light-text: #666;
@@ -29,26 +29,52 @@ body {
     background-color: var(--background-color);
 }
 
+.sidebar {
+    position: fixed;
+    top: 0;
+    gap: 0.5rem;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+}
+
+.sidebar ul {
+    flex-direction: column;
+}
+
+.sidebar ul li {
+    padding: 0.5rem 1rem;
+}
+
+.sidebar ul li:hover {
+    font-size: 1.05rem;
+}
+
+.sidebar h2 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.main-content {
+    margin-left: 240px; 
+    padding: 2rem;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-header {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--white);
-    padding: 2rem 0;
-    box-shadow: var(--shadow);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    text-align: center;
-}
-
-header h1 {
-    margin-bottom: 0.5rem;
-}
 
 .subtitle {
     font-size: 1.2rem;
@@ -58,7 +84,6 @@ header h1 {
 
 nav ul {
     display: flex;
-    justify-content: center;
     list-style: none;
     gap: 2rem;
     flex-wrap: wrap;
@@ -75,6 +100,11 @@ nav a {
 
 section {
     padding: 4rem 0;
+}
+.container h1 {
+    font-size: var(--font-size-h1);
+    margin-bottom: 1rem;
+    color: var(--primary-color);
 }
 
 .hero {
@@ -103,21 +133,6 @@ section {
     border-radius: 50%;
     box-shadow: var(--shadow);
     transition: var(--transition);
-}
-
-.cta-button {
-    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
-    color: var(--white);
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: var(--transition);
-    margin-top: 1rem;
-    display: inline-block;
-    text-decoration: none;
 }
 
 .job {
@@ -172,7 +187,7 @@ section {
 }
 
 .contact {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color);
     color: var(--white);
 }
 
