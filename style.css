@@ -29,6 +29,11 @@ body {
     background-color: var(--background-color);
 }
 
+main {
+    margin-left: 240px;
+    transition: margin-left 0.3s;
+}
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -173,6 +178,19 @@ section {
     display: none; /* só aparece quando rolar */
 }
 
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.skill-category {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
 
 .contact {
     background: var(--primary-color);
